@@ -14,6 +14,7 @@ Commands cheatsheet
   - [Current time](#current-time)
   - [Slap random person](#slap-random-person)
   - [Repeat word a random number of times](#repeat-word-a-random-number-of-times)
+  - [User levels](#user-levels)
 - [Stream Elements (chat bot)](#stream-elements-chat-bot)
   - [8-ball (custom, with default 8-ball disabled)](#8-ball-custom-with-default-8-ball-disabled)
   - [Coinflip](#coinflip)
@@ -23,6 +24,7 @@ Commands cheatsheet
   - [Current time](#current-time-1)
   - [Slap random person](#slap-random-person-1)
   - [Repeat word random number of times](#repeat-word-random-number-of-times)
+  - [User levels](#user-levels-1)
 - [Streamlabs Cloudbot](#streamlabs-cloudbot)
   - [](#)
   
@@ -155,6 +157,24 @@ Example:
 
 Note: Range is 1-9 (0-8 plus 1).
 
+## User levels
+
+Set minimum user level for a command.
+
+`!commands edit ![name] -ul=[level]`
+
+`name`: Command name
+
+`level`: Minimum level
+
+**Levels**:
+
+* Owner: `owner`
+* Mod: `moderator`
+* Regular: `regular`
+* Sub: `subscriber`
+* Everyone: `everyone`
+
 # Stream Elements (chat bot)
 
 ## 8-ball (custom, with default 8-ball disabled)
@@ -189,7 +209,7 @@ Example:
 
 ## Win Counter
 
-`!command add !wins ${channel} has won ${count wins} times!`
+`!command add !wins ${channel} has won ${getcount wins} times!`
 
 `!command add !addwin ${channel} has won ${count wins +1} times!`
 
@@ -254,6 +274,25 @@ Example:
 > jayther: !boom
 > 
 > StreamElements: boom boom boom boom
+
+## User levels
+
+Set minimum user level for commands.
+
+`!command options ![name] -level [amt]`
+
+`name`: Command Name
+
+`amt`: Level
+
+**Levels**:
+
+* Everyone: 100
+* Subs: 250
+* Regular: 300
+* Mod: 500
+* Supermod: 1000
+* Broadcaster: 1500
 
 
 # Streamlabs Cloudbot
