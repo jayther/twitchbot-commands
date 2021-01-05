@@ -15,6 +15,7 @@ Commands cheatsheet
   - [Slap random person](#slap-random-person)
   - [Repeat word a random number of times](#repeat-word-a-random-number-of-times)
   - [User levels](#user-levels)
+  - [Cooldown](#cooldown)
 - [Stream Elements (chat bot)](#stream-elements-chat-bot)
   - [8-ball (custom, with default 8-ball disabled)](#8-ball-custom-with-default-8-ball-disabled)
   - [Coinflip](#coinflip)
@@ -25,8 +26,9 @@ Commands cheatsheet
   - [Slap random person](#slap-random-person-1)
   - [Repeat word random number of times](#repeat-word-random-number-of-times)
   - [User levels](#user-levels-1)
+  - [Cooldown](#cooldown-1)
 - [Streamlabs Cloudbot](#streamlabs-cloudbot)
-  - [](#)
+  - [TODO](#todo)
   
 # Nightbot
 
@@ -175,6 +177,16 @@ Set minimum user level for a command.
 * Sub: `subscriber`
 * Everyone: `everyone`
 
+## Cooldown
+
+Set cooldown for a command.
+
+`!commands edit ![name] -cd=[seconds]`
+
+`name`: Command name
+
+`seconds`: Cooldown in seconds (5 seconds minimum)
+
 # Stream Elements (chat bot)
 
 ## 8-ball (custom, with default 8-ball disabled)
@@ -294,7 +306,21 @@ Set minimum user level for commands.
 * Supermod: 1000
 * Broadcaster: 1500
 
+## Cooldown
+
+Set cooldown for commands.
+
+There are two kinds of cooldowns:
+* **Global**: cooldown for everyone (when one person triggers it, no one else can trigger it until the cooldown passes)
+  `!command options ![name] -cd [seconds]`
+* **User**: cooldown for each person (when one person triggers it, only that person cannot trigger it again until the
+  cooldown passes)
+  `!command options ![name] -usercd [seconds]`
+
+`name`: Command name
+
+`seconds`: Cooldown in seconds.
 
 # Streamlabs Cloudbot
 
-##  
+## TODO
