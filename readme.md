@@ -5,6 +5,7 @@ Twitch Bot Custom Commands
 Commands cheatsheet
 
 - [Nightbot](#nightbot)
+  - [Important commands](#important-commands)
   - [8 Ball](#8-ball)
   - [Coin Flip (random)](#coin-flip-random)
   - [Random with emote](#random-with-emote)
@@ -17,6 +18,7 @@ Commands cheatsheet
   - [User levels](#user-levels)
   - [Cooldown](#cooldown)
 - [Stream Elements (chat bot)](#stream-elements-chat-bot)
+  - [Important Commands](#important-commands-1)
   - [8-ball (custom, with default 8-ball disabled)](#8-ball-custom-with-default-8-ball-disabled)
   - [Coinflip](#coinflip)
   - [Random with emote](#random-with-emote-1)
@@ -32,11 +34,11 @@ Commands cheatsheet
   
 # Nightbot
 
-Important commands:
+## Important commands
 
 * `!commands add [command]`
 * `!commands edit [command]`
-  * `!commands edit -cd=5`: Change cooldown to 5 seconds (minimum is 5 seconds)
+  * `!commands edit [command] -cd=5`: Change cooldown to 5 seconds (minimum is 5 seconds)
 * `!commands remove [command]`
 
 ## 8 Ball
@@ -84,6 +86,7 @@ Example:
 * `!commands add !wins 0 wins.`
 * `!commands add !addwin -a=!commands edit !wins $(count) wins.`
 * `!commands add !resetwins -a=!commands edit !addwin \-c=-1`
+* `!commands add !refreshwins -a=!commands edit !wins 0 wins.`
 
 Example:
 
@@ -99,7 +102,7 @@ Example:
 > 
 > Nightbot: 3 wins.
 
-Note: You will need to run `!resetwins` and then `!addwin` to reset the win counter to 0, since `!resetwins` does not update `!wins`.
+Note: You will need to run `!resetwins` and `!refreshwins` to reset the win counter to 0, since `!resetwins` does not update `!wins`.
 
 Example:
 
@@ -107,7 +110,7 @@ Example:
 >
 > Nightbot: The command "!addwin" has been edited successfully.
 >
-> jayther: !addwin
+> jayther: !refreshwins
 >
 > Nightbot: The command "!wins" has been edited successfully.
 >
@@ -188,6 +191,14 @@ Set cooldown for a command.
 `seconds`: Cooldown in seconds (5 seconds minimum)
 
 # Stream Elements (chat bot)
+
+## Important Commands
+
+* `!command add ![command]`
+* `!command edit ![command]`
+* `!command remove ![command]`
+* `!command options ![command] -enable`: Enable command
+* `!command options ![command] -disable`: Disable command
 
 ## 8-ball (custom, with default 8-ball disabled)
 
