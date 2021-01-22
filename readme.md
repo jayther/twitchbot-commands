@@ -40,6 +40,7 @@ Commands cheatsheet
 * `!commands edit [command]`
   * `!commands edit [command] -cd=5`: Change cooldown to 5 seconds (minimum is 5 seconds)
 * `!commands remove [command]`
+* `!commands add [command] -a=!meow`: Add command as an alias to the `!meow` command (must include arguments after `-a=!meow` if arguments are required)
 
 ## 8 Ball
 
@@ -199,6 +200,7 @@ Set cooldown for a command.
 * `!command remove ![command]`
 * `!command options ![command] -enable`: Enable command
 * `!command options ![command] -disable`: Disable command
+* `!command alias add [command] meow`: Add `!meow` as an alias command to `![command]`.
 
 ## 8-ball (custom, with default 8-ball disabled)
 
